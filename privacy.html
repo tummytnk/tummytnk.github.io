@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシーポリシー - 家計台帳</title>
+<style>
+  body { font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; line-height: 1.8; max-width: 720px; margin: 0 auto; padding: 24px 16px 64px; color: #222; }
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.1rem; margin-top: 2rem; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
+  .note { color: #555; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<p><a href="index.html">&larr; 家計台帳 トップへ</a></p>
+<h1>プライバシーポリシー</h1>
+<p class="note">最終更新日: 2026年10月11日</p>
+
+<h2>1. 概要</h2>
+<p>
+  「家計台帳」(以下「本アプリ」)は、開発者本人および本人が許可した家族が、自宅のコンピュータ上で使う個人用の家計簿アプリです。
+  本アプリは、利用者のデータを開発者のサーバーへ送信・保存することはありません。
+</p>
+
+<h2>2. 取得するGoogleユーザーデータ</h2>
+<p>
+  本アプリは、Gmail APIの読み取り専用スコープ(<code>https://www.googleapis.com/auth/gmail.readonly</code>)を利用し、
+  利用者自身が「領収書」というラベルを付けたメールの、件名・送信元・本文を取得します。
+  それ以外のメールは処理の対象にしません。メールの送信・変更・削除は行いません。
+</p>
+
+<h2>3. 利用目的</h2>
+<p>
+  取得したメールの内容は、店舗名・購入日・金額・品目などの支出情報を読み取り、家計簿として記録する目的にのみ利用します。
+  広告、プロファイリング、販売、その他の目的には利用しません。
+</p>
+
+<h2>4. 外部サービスへの送信</h2>
+<p>
+  支出情報を読み取るため、メール本文のテキスト(およびレシート画像)を、GoogleのGemini APIに送信して構造化処理を行います。
+  この送信は、上記の目的を実現するために必要な範囲に限られ、Gemini APIの利用規約およびプライバシーに関する条件に従って処理されます。
+  上記以外の第三者に、データを提供・販売・共有することはありません。
+</p>
+
+<h2>5. 保存と管理</h2>
+<p>
+  読み取った支出情報、メール本文、認証トークンは、利用者のコンピュータ内のファイル(SQLiteデータベースおよびトークンファイル)にのみ保存されます。
+  クラウドや開発者の管理するサーバーには保存されません。
+</p>
+
+<h2>6. 人による閲覧</h2>
+<p>
+  メールの内容は、利用者本人(および本人が許可した家族)が、本アプリの確認画面で自分たちのデータを確認する場合を除き、人が閲覧することはありません。
+</p>
+
+<h2>7. データの削除・アクセス権の取り消し</h2>
+<p>
+  Googleアカウントの「サードパーティによるアクセス」の設定画面から、本アプリのアクセス権をいつでも取り消せます。
+  また、コンピュータ内のデータベースファイルとトークンファイルを削除することで、保存されているデータをすべて削除できます。
+</p>
+
+<h2>8. Google API サービスのユーザーデータに関するポリシー</h2>
+<p>
+  本アプリによる、Google APIから受け取った情報の使用および他のアプリへの転送は、
+  <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API サービスのユーザーデータに関するポリシー</a>
+  (限定的な使用の要件を含む)に準拠します。
+</p>
+
+<h2>9. 改定</h2>
+<p>本ポリシーは、必要に応じて改定することがあります。改定後は、このページに掲載します。</p>
+
+<h2>10. 連絡先</h2>
+<p>【連絡先メールアドレス】</p>
+
+<h2>English summary</h2>
+<p>
+  "Kakei Daicho" is a personal household-ledger app run on the developer's own computer.
+  It uses the Gmail read-only scope to read only emails the user has labeled "領収書" (receipts), and sends the email text
+  to Google's Gemini API solely to extract expense data (store, date, amount, items). Data is stored locally on the user's computer
+  and is not sent to or stored on any server operated by the developer. Use of information received from Google APIs adheres to the
+  <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+  including the Limited Use requirements. Access can be revoked at any time from the Google Account permissions page.
+</p>
+</body>
+</html>
